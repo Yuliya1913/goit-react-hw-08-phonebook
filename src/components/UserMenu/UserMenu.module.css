@@ -1,9 +1,34 @@
-.wrapper {
+.wrapper_userMenu {
+  margin-left: auto;
+  margin-right: 0;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.username {
-  font-weight: 700;
+.username_userMenu {
+  font-weight: 500;
+  font-size: 25px;
+  color: blueviolet;
+  margin-right: 20px;
+}
+.name_userMenu {
+  color: #2206f6;
+}
+.button_userMenu {
+  background-color: #8bddf8;
+  border: 1px solid #ba7ef2;
+  color: #4730f6;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 30px;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+}
+.button_userMenu:hover {
+  background-color: rgb(173, 236, 236);
+  color: #dea6f8;
 }

@@ -52,11 +52,11 @@ export const ContactForm = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmitForm}>
-      <label className={css.label} htmlFor={nameId}>
+    <form className={css.form_contacts} onSubmit={handleSubmitForm}>
+      <label className={css.label_contacts} htmlFor={nameId}>
         Name
         <input
-          className={css.input}
+          className={css.input_contacts}
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -67,10 +67,10 @@ export const ContactForm = () => {
           id={nameId}
         />
       </label>
-      <label className={css.label} htmlFor={numberId}>
+      <label className={css.label_contacts} htmlFor={numberId}>
         Number
         <input
-          className={css.input}
+          className={css.input_contacts}
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -81,7 +81,7 @@ export const ContactForm = () => {
           id={numberId}
         />
       </label>
-      <button type="submit" className={css.btn}>
+      <button type="submit" className={css.btn_contacts}>
         Add contact
       </button>
     </form>

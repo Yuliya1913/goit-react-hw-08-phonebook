@@ -6,16 +6,16 @@ export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav className={css.navpage}>
-      <li>
-        <NavLink className={css.link} to="/">
+    <nav className={css.navpage_navigation}>
+      <li className={css.list_navigation}>
+        <NavLink className={css.link_navigation} to="/">
           Home
         </NavLink>
       </li>
       {/* если пользователь залогинен - переходим на станицу с контактами */}
       {isLoggedIn && (
-        <li>
-          <NavLink to="/contacts" className={css.link}>
+        <li className={css.list_navigation}>
+          <NavLink to="/contacts" className={css.link_navigation}>
             Contacts
           </NavLink>
         </li>

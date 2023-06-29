@@ -13,8 +13,8 @@ export const Filter = () => {
   };
 
   return (
-    <label htmlFor="" className={css.label}>
-      Find contacts by name
+    <label htmlFor="filterId" className={css.label_filter}>
+      <p className={css.title_filter}>Find contacts by name</p>
       <input
         className={css.filter}
         type="text"

@@ -1,0 +1,20 @@
+.navpage_navigation {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-right: auto;
+}
+.link_navigation {
+  margin-right: 40px;
+  text-decoration: none;
+  font-size: 35px;
+  color: #1501ad;
+  list-style: none;
+}
+
+.list_navigation.active {
+  color: red;
+}
+.list_navigation {
+  margin-left: 60px;
+}

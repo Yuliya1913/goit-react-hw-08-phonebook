@@ -8,12 +8,12 @@ export const ContactItem = ({ contact }) => {
 
   const { id, name, number } = contact;
   return (
-    <div className={css.wrapper}>
-      <li className={css.item}>
+    <div className={css.wrapper_contact}>
+      <li className={css.item_contact}>
         {name}: {number}
       </li>
       <button
-        className={css.button}
+        className={css.button_contact}
         onClick={() => {
           dispatch(deleteContact(id));
         }}

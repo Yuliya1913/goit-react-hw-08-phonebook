@@ -1,0 +1,14 @@
+.pages {
+  text-align: center;
+}
+
+.title_contact {
+  display: flex;
+}
+
+.pages_title {
+  display: flex;
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: rgb(133, 4, 253);
+}

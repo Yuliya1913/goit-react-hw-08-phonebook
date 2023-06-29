@@ -1,13 +1,24 @@
+.label_filter {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(146, 81, 242);
+}
+
+.title_filter {
+  display: flex;
+  margin-bottom: 30px;
+}
 .filter {
   display: flex;
+  justify-content: end;
   width: 400px;
   padding: 15px;
   font-size: 20px;
   font-weight: 400;
-  margin-top: 20px;
-}
 
-.label {
-  font-size: 20px;
-  font-weight: 500;
+  text-align: center;
+  border-radius: 25px;
+  border-color: blue;
+  margin-bottom: 30px;
 }

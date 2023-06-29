@@ -1,0 +1,13 @@
+.link_authNav {
+  margin-right: 30px;
+  color: #361df0;
+  font-size: 20px;
+  padding-top: 40px;
+  text-decoration: none;
+  display: inline-flex;
+  font-weight: 700;
+}
+
+.link_authNav:hover {
+  color: rgb(191, 126, 251);
+}

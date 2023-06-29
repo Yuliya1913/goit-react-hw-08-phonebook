@@ -53,8 +53,9 @@ export const refreshUser = createAsyncThunk(
     // получаем токен из глобального стэйт
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
+    console.log(persistedToken);
 
-    if (persistedToken === null) {
+    if (!persistedToken) {
       return thunkAPI.rejectWithValue('Unable to fetch user');
     }
 
