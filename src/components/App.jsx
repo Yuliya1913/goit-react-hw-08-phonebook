@@ -15,9 +15,8 @@ const LoginPage = lazy(() => import('pages/Login'));
 const ContactsPage = lazy(() => import('pages/Contacts'));
 
 export const App = () => {
-  // const isRefreshing = useSelector(selectIsRefreshing);
   const { isRefreshing } = useAuth();
-  console.log(isRefreshing);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
