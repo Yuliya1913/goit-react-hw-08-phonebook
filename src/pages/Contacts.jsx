@@ -25,7 +25,6 @@ const Contacts = () => {
 
   const isContacts = contacts.length > 0;
   return (
-    // <div className={css.container}>
     <div
       className={css.pages_contact}
       style={{

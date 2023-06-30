@@ -7,7 +7,6 @@ import { useAuth } from 'hooks/useAuth';
 import { Layout } from './Layout';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
-// import { selectIsRefreshing } from 'redux/auth/selector';
 
 const HomePage = lazy(() => import('pages/Home'));
 const RegisterPage = lazy(() => import('pages/Register'));
