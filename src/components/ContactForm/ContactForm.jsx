@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operation';
+import toast, { Toaster } from 'react-hot-toast';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -33,10 +34,58 @@ export const ContactForm = () => {
     const isExist = contacts.find(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
+
     // если вводим имя контакта, какое уже есть в телеф.книге, выводим сообщение, что имя такое есть такое и выходим
     if (isExist) {
-      alert(`${name} is already in contacts.`);
+      toast(
+        t => (
+          <span
+            style={{
+              color: '#1a01d4',
+            }}
+          >
+            {name} is already in contacts.
+            <button
+              style={{
+                marginLeft: '15px',
+                border: '1px solid rgb(205, 167, 244)',
+                borderRadius: '50px',
+                background: 'rgb(173, 236, 236)',
+                color: '#1a01d4',
+                padding: '7px',
+              }}
+              onClick={() => toast.dismiss(t.id)}
+            >
+              Close
+            </button>
+          </span>
+        ),
+        {
+          duration: '1000',
+          icon: '😕',
+          position: 'top-right',
+          style: {
+            border: '5px solid #e5ccfd',
+            borderRadius: '50px',
+            background: '#ebffeb',
+            color: '#4f0381',
+          },
+        }
+      );
+      reset();
       return;
+    } else {
+      toast(`new contact ${name} added`, {
+        position: 'top-right',
+        duration: '300',
+        icon: '👏',
+        style: {
+          border: '5px solid #e5ccfd',
+          borderRadius: '50px',
+          background: '#ebffeb',
+          color: '#1a01d4',
+        },
+      });
     }
 
     //   иначе отправляем экшен с данными в глобальный стэйт контактов
@@ -53,6 +102,7 @@ export const ContactForm = () => {
 
   return (
     <form className={css.form_contacts} onSubmit={handleSubmitForm}>
+      <Toaster />
       <label className={css.label_contacts} htmlFor={nameId}>
         Name
         <input
