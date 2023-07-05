@@ -61,9 +61,9 @@ export const ContactForm = () => {
           </span>
         ),
         {
-          duduration: 1000,
+          duduration: Infinity,
           icon: '😕',
-          position: 'top-right',
+          position: 'bottom-right',
           style: {
             border: '5px solid #e5ccfd',
             borderRadius: '50px',
@@ -76,7 +76,7 @@ export const ContactForm = () => {
       return;
     } else {
       toast(`new contact ${name} added`, {
-        position: 'top-right',
+        position: 'bottom-right',
         duration: 1000,
         icon: '👏',
         style: {
