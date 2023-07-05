@@ -61,7 +61,7 @@ export const ContactForm = () => {
           </span>
         ),
         {
-          duration: '1000',
+          duduration: 1000,
           icon: '😕',
           position: 'top-right',
           style: {
@@ -77,7 +77,7 @@ export const ContactForm = () => {
     } else {
       toast(`new contact ${name} added`, {
         position: 'top-right',
-        duration: '300',
+        duration: 1000,
         icon: '👏',
         style: {
           border: '5px solid #e5ccfd',
