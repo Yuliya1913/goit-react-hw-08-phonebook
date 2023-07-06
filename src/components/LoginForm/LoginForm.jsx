@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import css from './LoginForm.module.css';
 import { logIn } from 'redux/auth/operation';
 import { useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+// import toast from 'react-hot-toast';
 
 export const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -76,17 +76,17 @@ export const LoginForm = () => {
         password,
       })
     );
-    toast.success(`Congratulations you are login`, {
-      position: 'top-right',
-      duration: 1000,
-      icon: '👏',
-      style: {
-        border: '5px solid #e5ccfd',
-        borderRadius: '50px',
-        background: '#ebffeb',
-        color: '#1a01d4',
-      },
-    });
+    // toast.success(`Congratulations you are login`, {
+    //   position: 'top-right',
+    //   duration: 1000,
+    //   icon: '👏',
+    //   style: {
+    //     border: '5px solid #e5ccfd',
+    //     borderRadius: '50px',
+    //     background: '#ebffeb',
+    //     color: '#1a01d4',
+    //   },
+    // });
 
     reset();
   };
@@ -101,7 +101,6 @@ export const LoginForm = () => {
       {emailDirty && emailError && (
         <div style={{ color: 'red' }}>{emailError}</div>
       )}
-      <Toaster />
       <label className={css.label_login}>
         Email
         <input

@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operation';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -42,6 +42,7 @@ export const ContactForm = () => {
           <span
             style={{
               color: '#1a01d4',
+              fontSize: '19px',
             }}
           >
             {name} is already in contacts.
@@ -53,6 +54,7 @@ export const ContactForm = () => {
                 background: 'rgb(173, 236, 236)',
                 color: '#1a01d4',
                 padding: '7px',
+                fontSize: '17px',
               }}
               onClick={() => toast.dismiss(t.id)}
             >
@@ -67,7 +69,7 @@ export const ContactForm = () => {
           style: {
             border: '5px solid #e5ccfd',
             borderRadius: '50px',
-            background: '#ebffeb',
+            background: 'red',
             color: '#4f0381',
           },
         }
@@ -84,6 +86,7 @@ export const ContactForm = () => {
           borderRadius: '50px',
           background: '#ebffeb',
           color: '#1a01d4',
+          fontSize: '19px',
         },
       });
     }
@@ -102,7 +105,6 @@ export const ContactForm = () => {
 
   return (
     <form className={css.form_contacts} onSubmit={handleSubmitForm}>
-      <Toaster />
       <label className={css.label_contacts} htmlFor={nameId}>
         Name
         <input

@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import css from './RegisterForm.module.css';
 import { register } from 'redux/auth/operation';
 import { useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 export const RegisterForm = () => {
   const [name, setName] = useState('');
@@ -77,19 +77,18 @@ export const RegisterForm = () => {
     );
     toast.success(`${name} congratulations you are registered`, {
       position: 'top-right',
-      duration: 1000,
+      duration: 3000,
       icon: '👏',
       style: {
         border: '5px solid #e5ccfd',
         borderRadius: '50px',
         background: '#ebffeb',
         color: '#1a01d4',
+        fontSize: '19px',
       },
     });
 
     reset();
-
-    // alert('Сongratulations you are registered');
   };
 
   const reset = () => {
@@ -126,7 +125,6 @@ export const RegisterForm = () => {
       onSubmit={handleSubmit}
       autoComplete="off"
     >
-      <Toaster />
       {/* если нажали на name и в имени есть ошибка, то выводим ошибку*/}
       {nameDirty && nameError && (
         <div style={{ color: 'red' }}>{nameError}</div>
