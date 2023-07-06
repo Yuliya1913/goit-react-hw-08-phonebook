@@ -76,17 +76,6 @@ export const LoginForm = () => {
         password,
       })
     );
-    // toast.success(`Congratulations you are login`, {
-    //   position: 'top-right',
-    //   duration: 1000,
-    //   icon: '👏',
-    //   style: {
-    //     border: '5px solid #e5ccfd',
-    //     borderRadius: '50px',
-    //     background: '#ebffeb',
-    //     color: '#1a01d4',
-    //   },
-    // });
 
     reset();
   };
